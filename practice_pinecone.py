@@ -18,7 +18,7 @@ embedding_dim = model.get_sentence_embedding_dimension()
 print("Embedding dimension:", embedding_dim)
 
 # -------------------------- Initialize Pinecone --------------------------
-pc = Pinecone(api_key=AIzaSyDfs13PrF09jY0tHjMYXWpfLs4glYQZRB4)
+pc = Pinecone(api_key=PINECONE_API_KEY)
 
 
 # ------------------------ Create index if not exists ----------------------------------
@@ -118,3 +118,4 @@ def search_pdfs(query, top_k=5):
 user_query = input("Enter your search query: ")
 
 search_pdfs(user_query)
+
